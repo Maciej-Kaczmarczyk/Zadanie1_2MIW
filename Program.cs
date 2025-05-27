@@ -83,6 +83,8 @@ namespace GeneticAlgorithmApproximation
             var bestFinal = population.OrderByDescending(p => EvaluateFitness(p)).First();
             var (pa, pb, pc) = DecodeIndividual(bestFinal);
             Console.WriteLine($"\nNajlepszy wynik końcowy: pa = {pa:F4}, pb = {pb:F4}, pc = {pc:F4}, fitness = {EvaluateFitness(bestFinal):F6}");
+            Console.WriteLine("Naciśnij dowolny klawisz, aby zakończyć...");
+            Console.ReadKey();
         }
 
         static void LoadSamples(string path)
